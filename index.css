@@ -15,7 +15,7 @@ body {
 header {
     background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour un bon contraste */
     padding: 1rem;
-    color: red;
+    color: white;
     text-align: center;
     font-family: 'Pacifico', cursive; /* Police stylisée pour l'en-tête */
 }
