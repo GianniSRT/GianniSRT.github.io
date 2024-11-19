@@ -1,0 +1,226 @@
+/* CSS global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Dégradé de couleur chaud avec des tons rose/orange */
+    background-size: cover; /* Le dégradé couvre toute la page */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Permet d'assurer que le footer reste en bas */
+}
+
+/* En-tête */
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour un bon contraste */
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    font-family: 'Pacifico', cursive; /* Police stylisée pour l'en-tête */
+}
+
+/* Navigation */
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #feb47b; /* Couleur douce au survol */
+}
+
+/* Pied de page */
+footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Permet de pousser le footer en bas */
+}
+
+/* Section principale */
+.GIANNI {
+    font-size: 20px;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.4); /* Légère transparence pour contraster avec le fond */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombrage léger pour plus de lisibilité */
+}
+
+/* Introduction */
+.introduction {
+    font-family: 'Pacifico', cursive; 
+    font-size: 1.8rem; 
+    color: #fff; /* Couleur principale */
+    text-align: center; /* Centrer le texte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    padding: 1rem; 
+    border: 2px solid #feb47b; 
+    border-radius: 10px; 
+    display: inline-block; 
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fond dégradé pour le texte */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre externe */
+}
+
+/* Alignement vertical et effets des images */
+.imgapercu {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+}
+
+.img-container {
+    width: 100%; 
+    max-width: 350px; 
+    height: auto; 
+    overflow: hidden; 
+    border-radius: 8px; 
+}
+
+.img-container img {
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transition douce */
+}
+
+.img-container img:hover {
+    transform: scale(1.05); /* Agrandissement au survol */
+    filter: brightness(1.1); /* Augmente la luminosité au survol */
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    width: 300px;
+    background-color: #fff; /* Fond clair pour les cartes */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid #feb47b; /* Bordure subtile sous l'image */
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: left;
+}
+
+.card h3 {
+    color: #333;
+    margin: 0.5rem 0;
+    font-family: 'Pacifico', cursive; /* Police stylisée pour les titres */
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Bouton de la card */
+.card .btn {
+    background-color: #ff7e5f; /* Couleur du bouton */
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card .btn:hover {
+    background-color: #feb47b; /* Couleur du bouton au survol */
+}
+
+/* Animation d'apparition des cards */
+.card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+.contact-info {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 0; /* Enlève la marge par défaut */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.contact-info li {
+    margin-bottom: 10px; /* Espacement entre chaque ligne */
+    font-size: 1.1rem; /* Taille de texte plus grande */
+}
+
+.contact-info a {
+    color: #ff7e5f; /* Couleur de lien */
+    text-decoration: none; /* Supprime la sous-ligne */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Souligne le lien au survol */
+}
+.logocontact {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    align-items: center;
+}
+
+.logocontact img {
+    width: 150px; 
+    height: auto; 
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.logocontact img:hover {
+    transform: scale(1.1); 
+    filter: brightness(1.2); 
+}
+
+.contact-title {
+    font-family: 'Pacifico', cursive; 
+    font-size: 2.5rem; 
+    text-align: center; 
+    color: #ff7e5f; /* Couleur principale */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
+    letter-spacing: 2px; 
+    margin-top: 1rem; 
+    margin-bottom: 2rem; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+/* Animation au survol */
+.contact-title:hover {
+    transform: translateY(-5px); 
+    color: #feb47b; 
+}
+
