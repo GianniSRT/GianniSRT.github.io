@@ -9,6 +9,20 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Permet d'assurer que le footer reste en bas */
+
+}
+
+h1, 
+h2 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+  }
+  
+h2 {
+font-size: 2em;
+
 }
 
 /* En-tête */
@@ -106,6 +120,7 @@ footer {
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
+    padding : 1%
 }
 
 .card {
@@ -167,60 +182,105 @@ footer {
     transform: translateY(0);
     opacity: 1;
 }
-.contact-info {
-    list-style: none; /* Supprime les puces de la liste */
-    padding: 0; /* Enlève le padding par défaut */
-    margin: 0; /* Enlève la marge par défaut */
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-}
 
-.contact-info li {
-    margin-bottom: 10px; /* Espacement entre chaque ligne */
-    font-size: 1.1rem; /* Taille de texte plus grande */
-}
-
-.contact-info a {
-    color: #ff7e5f; /* Couleur de lien */
-    text-decoration: none; /* Supprime la sous-ligne */
-}
-
-.contact-info a:hover {
-    text-decoration: underline; /* Souligne le lien au survol */
-}
-.logocontact {
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
-    align-items: center;
-}
-
-.logocontact img {
-    width: 150px; 
-    height: auto; 
-    transition: transform 0.3s ease, filter 0.3s ease; 
-}
-
-.logocontact img:hover {
-    transform: scale(1.1); 
-    filter: brightness(1.2); 
+/* Section Contact */
+.contact-section {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Dégradé dynamique */
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 600px;
 }
 
 .contact-title {
-    font-family: 'Pacifico', cursive; 
-    font-size: 2.5rem; 
-    text-align: center; 
-    color: #ff7e5f; /* Couleur principale */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); 
-    letter-spacing: 2px; 
-    margin-top: 1rem; 
-    margin-bottom: 2rem; 
-    transition: transform 0.3s ease, color 0.3s ease; 
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Animation au survol */
 .contact-title:hover {
-    transform: translateY(-5px); 
-    color: #feb47b; 
+    transform: translateY(-5px);
+    color: #ffe0d1; /* Teinte douce au survol */
 }
 
+.contact-intro {
+    font-size: 1.2rem;
+    color: rgb(186, 25, 25);
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(27, 25, 25);
+}
+
+.contact-info li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.contact-info strong {
+    font-weight: bold;
+    color: #ffe0d1;
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #141313;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Logos */
+.contact-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.contact-logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px; /* Coins arrondis pour une esthétique moderne */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombrage autour des logos */
+}
+
+.contact-logo:hover {
+    transform: scale(1.15); /* Agrandissement subtil */
+    filter: brightness(1.3); /* Plus lumineux au survol */
+}
+
+/* Animations supplémentaires */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.5s ease-in-out;
+}
