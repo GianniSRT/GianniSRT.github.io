@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez-moi pour toute collaboration ou projet en développement web.">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-    <title> Portfolio Contact</title>
+    <title>Portfolio - Contact</title>
 </head>
+
 <body>
     <header>
         <nav class="titres">
-            <a href="index.html">Accueil 🏠</a>
-            <a href="réalisations.html">Portfolio 🎥</a>
-            <a href="contact.html">Me Contacter 🌐</a>
+            <a href="index.html">🏠 Accueil</a>
+            <a href="réalisations.html">🎥 Portfolio</a>
+            <a href="contact.html">🌐 Me Contacter</a>
         </nav>
     </header>
 
     <main>
+        <!-- Section Contact -->
         <section class="contact-section">
-            <h1 class="contact-title">Contactez-moi</h1>
-            <p class="contact-intro">Vous pouvez me joindre via :</p>
-            <ul class="contact-info">
-                <li>
-                    <strong>@Mail pro :</strong>
-                    <a href=https://mail.google.com/mail/u/0/?pli=1#inbox?compose=DmwnWrRmTWgkkpVgjtFJqNltHnWRQnzbspWqbFpjVhBNscvjCgzkGdMSRFvdSfqXdvVvhLXKpCmL">gianni.sorrentino@laplateforme.io</a>
-                </li>
-                <li>
-                    <strong>Mon LinkedIn :</strong>
-                    <a href="https://linkedin.com/in/gianni-srt-786421337/" target="_blank">Lien LinkedIn</a>
-                </li>
-            </ul>
-            <div class="contact-logos">
-                <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">
-                    <img src="linkedin.png" alt="LinkedIn Logo" class="contact-logo">
-                </a>
-                <a href="mailto:gianni@example.com">
-                    <img src="gmail_new_logo_icon_159149.png" alt="Gmail Logo" class="contact-logo">
-                </a>
+            <h1 class="contact-title">📩 Contactez-moi</h1>
+            <p class="contact-intro">N'hésitez pas à me joindre pour toute question ou collaboration !</p>
+            
+            <div class="contact-container">
+                <div class="contact-details">
+                    <h2>📧 Mes Coordonnées</h2>
+                    <ul class="contact-info">
+                        <li>
+                            <strong>Email :</strong>
+                            <a href="mailto:gianni.sorrentino@laplateforme.io">gianni.sorrentino@laplateforme.io</a>
+                        </li>
+                        <li>
+                            <strong>LinkedIn :</strong>
+                            <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">Mon Profil LinkedIn</a>
+                        </li>
+                    </ul>
+                    <div class="contact-logos">
+                        <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">
+                            <img src="linkedin.png" alt="LinkedIn Logo" class="contact-logo">
+                        </a>
+                        <a href="mailto:gianni.sorrentino@laplateforme.io">
+                            <img src="gmail_new_logo_icon_159149.png" alt="Gmail Logo" class="contact-logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>💬 Laissez-moi un message</h2>
+                    <form action="mailto:gianni.sorrentino@laplateforme.io" method="post" enctype="text/plain">
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
-    
+
     <footer>
-        <p>© 2024... Sorrentino GIANNI - WEB DEVELOPER. © </p>
+        <p>© 2024 Sorrentino Gianni - Web Developer.</p>
     </footer>
 </body>
+
 </html>

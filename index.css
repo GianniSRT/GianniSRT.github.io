@@ -1,286 +1,408 @@
-/* CSS global */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Dégradé de couleur chaud avec des tons rose/orange */
-    background-size: cover; /* Le dégradé couvre toute la page */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Permet d'assurer que le footer reste en bas */
-
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Police principale */
 }
 
-h1, 
-h2 {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
-  }
-  
-h2 {
-font-size: 2em;
-
+/* Body */
+body {
+    background-color: #f4f6f7; /* Fond clair */
+    color: #000; /* Texte principal en noir */
+    line-height: 1.6;
+    font-size: 1rem; /* Taille de texte confortable */
 }
 
-/* En-tête */
+/* Header */
 header {
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre pour un bon contraste */
-    padding: 1rem;
-    color: white;
-    text-align: center;
-    font-family: 'Pacifico', cursive; /* Police stylisée pour l'en-tête */
+    background-color: #F0F0F0; /* Gris clair */
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Navigation */
-nav a {
-    margin: 0 15px;
-    color: white;
+header .titres a {
+    color: #000; /* Texte en noir */
     text-decoration: none;
-    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: all 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
-    color: #feb47b; /* Couleur douce au survol */
+header .titres a:hover {
+    color: #fff;
+    background-color: #D1D1D1; /* Gris plus foncé au survol */
+    border-radius: 5px;
 }
 
-/* Pied de page */
-footer {
-    background-color: rgba(0, 0, 0, 0.6); /* Fond sombre */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto; /* Permet de pousser le footer en bas */
+/* Main Section */
+main {
+    padding: 3rem;
+    background: linear-gradient(135deg, #F0F0F0 0%, #D9D9D9 100%);
+    border-radius: 15px;
 }
 
-/* Section principale */
-.GIANNI {
-    font-size: 20px;
-    text-align: center;
-    padding: 2rem;
-    background: rgba(0, 0, 0, 0.4); /* Légère transparence pour contraster avec le fond */
+/* Section "À propos de moi" */
+.about {
+    background-color: #E6A2A2; /* Couleur douce */
+    padding: 2.5rem;
+    margin-bottom: 3rem;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ombrage léger pour plus de lisibilité */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-/* Introduction */
-.introduction {
-    font-family: 'Pacifico', cursive; 
-    font-size: 1.8rem; 
-    color: #fff; /* Couleur principale */
-    text-align: center; /* Centrer le texte */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-    padding: 1rem; 
-    border: 2px solid #feb47b; 
-    border-radius: 10px; 
-    display: inline-block; 
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Fond dégradé pour le texte */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Ajoute une ombre externe */
+.about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
-/* Alignement vertical et effets des images */
-.imgapercu {
+.about p {
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.about .emoji {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+/* Skills Section */
+.skills {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, #F0F0F0 0%, #D9D9D9 100%);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
+    color: #000;
+    margin-bottom: 1.5rem;
+}
+
+.skills-container {
     display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-    gap: 2rem; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.img-container {
-    width: 100%; 
-    max-width: 350px; 
-    height: auto; 
-    overflow: hidden; 
-    border-radius: 8px; 
+/* Cards Skills */
+.skill-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.img-container img {
-    width: 100%; 
-    height: auto; 
-    object-fit: contain; 
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transition douce */
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.img-container img:hover {
-    transform: scale(1.05); /* Agrandissement au survol */
-    filter: brightness(1.1); /* Augmente la luminosité au survol */
+.skill-card img {
+    width: 60px;
+    margin-bottom: 15px;
 }
 
-/* Cards */
+.skill-card h3 {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.skill-card p {
+    color: #7f8c8d;
+}
+
+/* Section Réalisations */
+.realisations {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.realisations h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 2rem;
+}
+
+/* Container des cartes */
 .cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
-    padding : 1%
+    gap: 20px;
+    padding: 0 2rem;
 }
 
+/* Style des cartes */
 .card {
-    width: 300px;
-    background-color: #fff; /* Fond clair pour les cartes */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    background-color: #fff;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    font-family: 'Roboto', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Images dans les cartes */
 .card img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: cover;
-    border-bottom: 2px solid #feb47b; /* Bordure subtile sous l'image */
 }
 
+/* Contenu des cartes */
 .card-content {
-    padding: 1rem;
-    text-align: left;
+    padding: 15px;
+    text-align: center;
 }
 
-.card h3 {
+.card-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
     color: #333;
-    margin: 0.5rem 0;
-    font-family: 'Pacifico', cursive; /* Police stylisée pour les titres */
-    font-size: 1.5rem;
 }
 
-.card p {
-    color: #666;
+.card-content p {
     font-size: 1rem;
-    line-height: 1.5;
+    color: #555;
+    margin-bottom: 15px;
 }
 
-/* Bouton de la card */
-.card .btn {
-    background-color: #ff7e5f; /* Couleur du bouton */
-    color: white;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 4px;
+/* Boutons */
+.btn {
     display: inline-block;
-    margin-top: 1rem;
-    font-weight: bold;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #F0F0F0;
+    color: #000;
     text-align: center;
+    padding: 1.5rem;
+    font-size: 1rem;
 }
 
-.card .btn:hover {
-    background-color: #feb47b; /* Couleur du bouton au survol */
+footer p {
+    font-size: 1.1rem;
+    color: #000;
+}
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Police principale */
 }
 
-/* Animation d'apparition des cards */
-.card.show {
-    transform: translateY(0);
-    opacity: 1;
+/* Body */
+body {
+    background-color: #f4f6f7; /* Fond clair */
+    color: #000; /* Texte principal en noir */
+    line-height: 1.6;
+    font-size: 1rem; /* Taille de texte confortable */
 }
 
-/* Section Contact */
+/* Header */
+header {
+    background-color: #F0F0F0; /* Gris clair */
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navigation */
+header .titres a {
+    color: #000; /* Texte en noir */
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+header .titres a:hover {
+    color: #fff;
+    background-color: #D1D1D1; /* Gris plus foncé au survol */
+    border-radius: 5px;
+}
+
+/* Main Section */
+main {
+    padding: 3rem;
+    background: linear-gradient(135deg, #F0F0F0 0%, #D9D9D9 100%);
+    border-radius: 15px;
+}
+
+/* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Dégradé dynamique */
-    padding: 3rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin: 2rem auto;
-    max-width: 600px;
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-title {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-    margin-bottom: 1.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.contact-title:hover {
-    transform: translateY(-5px);
-    color: #ffe0d1; /* Teinte douce au survol */
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .contact-intro {
     font-size: 1.2rem;
-    color: rgb(186, 25, 25);
+    color: #666;
     margin-bottom: 2rem;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Contact Details */
+.contact-details {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
     list-style: none;
     padding: 0;
-    margin: 0 0 2rem;
-    font-family: 'Roboto', sans-serif;
-    color: rgb(27, 25, 25);
 }
 
 .contact-info li {
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
     font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-.contact-info strong {
-    font-weight: bold;
-    color: #ffe0d1;
 }
 
 .contact-info a {
-    color: #ffffff;
+    color: #0073b1;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #141313;
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
 }
 
-/* Logos */
 .contact-logos {
     display: flex;
     justify-content: center;
     gap: 20px;
-    align-items: center;
-    margin-top: 2rem;
+    margin-top: 20px;
 }
 
 .contact-logo {
-    width: 100px;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    border-radius: 10px; /* Coins arrondis pour une esthétique moderne */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombrage autour des logos */
+    width: 40px;
+    transition: transform 0.3s ease;
 }
 
 .contact-logo:hover {
-    transform: scale(1.15); /* Agrandissement subtil */
-    filter: brightness(1.3); /* Plus lumineux au survol */
+    transform: scale(1.1);
 }
 
-/* Animations supplémentaires */
-@keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Contact Form */
+.contact-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.fade-in {
-    animation: fade-in 0.5s ease-in-out;
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #0073b1;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #005582;
+}
+
+/* Footer */
+footer {
+    background-color: #F0F0F0;
+    color: #000;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    color: #000;
 }
