@@ -50,7 +50,7 @@ main {
 
 /* Section "À propos de moi" */
 .about {
-    background-color: #E6A2A2; /* Couleur douce */
+    background-color: #959595; /* Couleur douce */
     padding: 2.5rem;
     margin-bottom: 3rem;
     border-radius: 10px;
@@ -406,3 +406,4 @@ footer p {
     font-size: 1.1rem;
     color: #000;
 }
+
