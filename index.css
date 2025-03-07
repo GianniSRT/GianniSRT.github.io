@@ -41,7 +41,7 @@ header .titres a:hover {
     border-radius: 5px;
 }
 
-/* Main Section */
+/* Main Section */  
 main {
     padding: 3rem;
     background: linear-gradient(135deg, #F0F0F0 0%, #D9D9D9 100%);
@@ -253,7 +253,7 @@ header {
 header .titres a {
     color: #000; /* Texte en noir */
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Pacifico', sans-serif;
     font-weight: 600;
     font-size: 1.2rem;
     padding: 10px;
