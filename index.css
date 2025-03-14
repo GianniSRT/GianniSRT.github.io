@@ -429,4 +429,59 @@ footer p {
     background-color: #0e355c;
     transform: scale(1.05);
 }
-    
+    /* --- Correction de la Responsivité pour la Section Contact --- */
+
+/* Contact Container - Version Responsive */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column; /* Empile les éléments au lieu de les aligner horizontalement */
+        gap: 1.5rem;
+    }
+
+    .contact-details, 
+    .contact-form {
+        width: 100%; /* Prend toute la largeur sur petits écrans */
+    }
+}
+
+/* Formulaire - Amélioration Mobile */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-intro {
+        font-size: 1.1rem;
+    }
+
+    .contact-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contact-form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Logos de contact */
+@media (max-width: 480px) {
+    .contact-logos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact-logo {
+        width: 35px; /* Réduit la taille des icônes */
+    }
+}
