@@ -407,3 +407,26 @@ footer p {
     color: #000;
 }
 
+.github-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6f6f6f;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.github-button:hover {
+    background-color: #0e355c;
+    transform: scale(1.05);
+}
+    
