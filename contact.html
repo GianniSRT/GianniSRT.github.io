@@ -2,78 +2,95 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contactez-moi pour toute collaboration ou projet en développement web.">
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
-    <title>Portfolio - Contact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez-moi pour toute collaboration ou projet en développement web." />
+  <title>Portfolio - Contact</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/contact.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="titres">
-            <a href="index.html">🏠 Accueil</a>
-            <a href="réalisations.html">🎥 Portfolio</a>
-            <a href="parcours.html">📍 Mon Parcours </a>
-            <a href="contact.html">🌐 Me Contacter</a>
-            
-        </nav>
-    </header>
 
-    <main>
-        <!-- Section Contact -->
-        <section class="contact-section">
-            <h1 class="contact-title">📩 Contactez-moi</h1>
-            <p class="contact-intro">N'hésitez pas à me joindre pour toute question ou collaboration !</p>
-            
-            <div class="contact-container">
-                <div class="contact-details">
-                    <h2>📧 Mes Coordonnées</h2>
-                    <ul class="contact-info">
-                        <li>
-                            <strong>Email :</strong>
-                            <a href="mailto:gianni.sorrentino@laplateforme.io">gianni.sorrentino@laplateforme.io</a>
-                        </li>
-                        <li>
-                            <strong>LinkedIn :</strong>
-                            <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">Mon Profil LinkedIn</a>
-                        </li>
-                    </ul>
-                    <div class="contact-logos">
-                        <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">
-                            <img src="linkedin.png" alt="LinkedIn Logo" class="contact-logo">
-                        </a>
-                        <a href="mailto:gianni.sorrentino@laplateforme.io">
-                            <img src="gmail_new_logo_icon_159149.png" alt="Gmail Logo" class="contact-logo">
-                        </a>
-                    </div>
-                </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gianni Sorrentino</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">🏠 Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="réalisations.html">🎥 Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="parcours.html">📍 Mon Parcours</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">🌐 Me Contacter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                <div class="contact-form">
-                    <h2>💬 Laissez-moi un message</h2>
-                    <form action="mailto:gianni.sorrentino@laplateforme.io" method="post" enctype="text/plain">
-                        <label for="name">Nom :</label>
-                        <input type="text" id="name" name="name" required>
+  <!-- Section Contact -->
+  <section class="contact-section">
+    <h1 class="contact-title">📩 Contactez-moi</h1>
+    <p class="contact-intro">N'hésitez pas à me joindre pour toute question ou collaboration !</p>
 
-                        <label for="email">Email :</label>
-                        <input type="email" id="email" name="email" required>
+    <div class="contact-container">
+      <div class="contact-details">
+        <h2>📧 Mes Coordonnées</h2>
+        <ul class="contact-info">
+          <li>
+            <strong>Email :</strong>
+            <a href="mailto:gianni.sorrentino@laplateforme.io">gianni.sorrentino@laplateforme.io</a>
+          </li>
+          <li>
+            <strong>LinkedIn :</strong>
+            <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">Mon Profil LinkedIn</a>
+          </li>
+          
+          <li>
+            <strong>Github :</strong>
+            <a href="https://github.com/GianniSRT" target="_blank">Mon Profil Github</a>
+          </li>
+        </ul>
+        <div class="contact-logos">
+          <a href="https://www.linkedin.com/in/gianni-srt-786421337/" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn Logo" class="contact-logo">
+          </a>
+          <a href="mailto:gianni.sorrentino@laplateforme.io">
+            <img src="images/gmail_new_logo_icon_159149.png" alt="Gmail Logo" class="contact-logo">
+          </a>
+        </div>
+      </div>
 
-                        <label for="message">Message :</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+      <div class="contact-form">
+        <h2>💬 Laissez-moi un message</h2>
+        <form action="mailto:gianni.sorrentino@laplateforme.io" method="post" enctype="text/plain">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="name" required>
 
-                        <button type="submit">Envoyer</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required>
 
-    <footer>
-        <p>© 2025 Sorrentino Gianni - Web Developer.</p>
-    </footer>
+          <label for="message">Message :</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Envoyer</button>
+        </form>
+        <small>Note : Ce formulaire est juste une démo de mes compétences en développement de formulaires. Il pourrait être fonctionnel en ajoutant un backend.</small>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Sorrentino Gianni - Web Developer.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

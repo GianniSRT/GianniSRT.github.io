@@ -1,0 +1,188 @@
+/* Importation de la police Poppins depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #343a40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Liens navbar avec effet animé */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 700; /* Ajoute du gras aux liens */
+
+}
+
+/* Ligne animée au hover */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dégradé solaire au survol */
+.navbar-nav .nav-link:hover {
+  color: transparent;
+  background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700); /* Dégradé solaire */
+  -webkit-background-clip: text; /* Applique le dégradé uniquement sur le texte */
+  text-decoration: none;
+}
+
+/* SECTION RÉALISATIONS */
+.realisations {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.realisations h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 40px;
+}
+
+/* TEXTE DE PROGRESSION */
+.progression-text p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CARTES DE RÉALISATIONS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 5px solid #ff6347;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #343a40;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.card-content .btn {
+  display: inline-block;
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+  background-color: #ff4500;
+}
+
+/* SECTION GITHUB */
+.github-container {
+  margin-top: 40px;
+}
+
+.github-button {
+  background-color: #24292f;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.github-button:hover {
+  background-color: #2c3338;
+}
+
+/* SECTION PRÉSENTATION */
+.presentation {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #FF6347, #FF8C00);
+  color: white;
+}
+
+.presentation h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.introduction {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}

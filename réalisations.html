@@ -1,109 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Sorrentino Gianni - Découvrez mes projets récents et les technologies utilisées.">
-    <title>Portfolio - Réalisations</title>
-    
-    <!-- Liens CSS -->
-    <link rel="stylesheet" href="index.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Sorrentino Gianni - Découvrez mes projets récents et les technologies utilisées." />
+  <title>Portfolio - Gianni Sorrentino - Réalisations</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/realisations.css" />
 </head>
+
 <body>
 
-    <header>
-        <nav class="titres">
-            <a href="index.html">🏠 Accueil</a>
-            <a href="réalisations.html">🎥 Portfolio</a>
-            <a href="parcours.html">📍 Mon Parcours </a>
-            <a href="contact.html">🌐 Me Contacter</a>
-            
-        </nav>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Gianni Sorrentino</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">🏠 Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active" href="réalisations.html">🎥 Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="parcours.html">📍 Mon Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">🌐 Me Contacter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <main>
-        <section class="gianni">
-            <h1> Portfolio </h1>
-            <p class="introduction">
-                Découvrez mon univers de développement web, où créativité et technique se rencontrent pour donner vie à des projets passionnants. 
-                Voici mes travaux récents :
-            </p>
-        </section>
+  <!-- Réalisations -->
+  <section class="realisations py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">🛠️ Mes Réalisations</h2>
 
-        <section class="realisations">
-            <h2>🛠️ Mes Réalisations</h2>
-           
-            <div class="progression-text">
-                <p>On peut observer une progression entre mes premiers projets et ceux réalisés plus récemment, reflétant l'évolution de mes compétences depuis le début de ma première année.</p>
+      <div class="progression-text text-center mb-5">
+        <p>On peut observer une progression entre mes premiers projets et ceux réalisés plus récemment, reflétant l'évolution de mes compétences depuis le début de ma première année.</p>
+      </div>
+
+      <!-- Grille des cartes -->
+      <article class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Projet 1 -->
+        <div class="col">
+          <div class="card">
+            <img src="images/fleurs-ete-fond-printemps-banner-sale-copy-space_536572-1373.jpg" alt="Projet BloomPetals" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">1ᵉʳ Projet BloomPetals</h3>
+              <p class="card-text">Un projet personnel consacré aux fleurs, renforçant mes compétences en HTML et CSS.</p>
+              <a href="https://gianni-sorrentino.students-laplateforme.io/bloompetals/" target="_blank" class="btn btn-primary">Voir le projet</a>
             </div>
-                        <article class="cards">
-                <div class="card">
-                    <img src="fleurs-ete-fond-printemps-banner-sale-copy-space_536572-1373.jpg" alt="Projet BloomPetals">
-                    <div class="card-content">
-                        <h3>1ᵉʳ Projet BloomPetals</h3>
-                        <p>Un projet personnel consacré aux fleurs, renforçant mes compétences en HTML et CSS.</p>
-                        <a href="https://gianni-sorrentino.students-laplateforme.io/bloompetals/" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-        
-                <div class="card">
-                    <img src="istockphoto-1807563980-612x612.jpg" alt="Projet Matcha Tea">
-                    <div class="card-content">
-                        <h3>2ᵉ Matcha Tea</h3>
-                        <p>Le but de ce projet était de créer un site web pour promouvoir la vente de produits autour du Thé Matcha.</p>
-                        <a href="https://gianni-sorrentino.students-laplateforme.io/MatchaTea" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-        
-                <div class="card">
-                    <img src="quiz.jpg" alt="Projet Célébrités">
-                    <div class="card-content">
-                        <h3>3ᵉ Projet Quizz-Night</h3>
-                        <p>Un projet collectif enrichissant, le but étant de créer son propre Quiz et d'y répondre, grâce à du PHP.</p>
-                        <a href="https://gianni-sorrentino.students-laplateforme.io/quizz-night/" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-        
-                <div class="card">
-                    <img src="livre or.png" alt="Livre d'Or">
-                    <div class="card-content">
-                        <h3>4ᵉ Livre d'Or</h3>
-                        <p>À ce jour, c'est notre dernier projet collectif. Le but étant de créer une page d'avis avec une inscription pour les utilisateurs, ainsi que les informations du post en question, grâce à du PHP.</p>
-                        <a href="https://github.com/axel-heureux/livre-or" target="_blank" class="btn">Voir le projet</a>
-                    </div>
-                </div>
-            </article>
-            <p>Vous pouvez également accéder à l'ensemble de mes projets publics sur mon profil GitHub, où vous pourrez les tester, télécharger ou les modifier selon vos besoins.</p>
+          </div>
+        </div>
 
-<div class="github-container">
-    <a href="https://github.com/GianniSRT" target="_blank" class="github-button">
-        🔗 Mon Profil GitHub
-    </a>
-</div>
+        <!-- Projet 2 -->
+        <div class="col">
+          <div class="card">
+            <img src="images/istockphoto-1807563980-612x612.jpg" alt="Projet Matcha Tea" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">2ᵉ Matcha Tea</h3>
+              <p class="card-text">Le but de ce projet était de créer un site web pour promouvoir la vente de produits autour du Thé Matcha.</p>
+              <a href="https://gianni-sorrentino.students-laplateforme.io/MatchaTea" target="_blank" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
 
-                    </section>
-        
+        <!-- Projet 3 -->
+        <div class="col">
+          <div class="card">
+            <img src="images/quiz.jpg" alt="Projet Célébrités" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">3ᵉ Projet Quizz-Night</h3>
+              <p class="card-text">Un projet collectif enrichissant, le but étant de créer son propre Quiz et d'y répondre, grâce à du PHP.</p>
+              <a href="https://gianni-sorrentino.students-laplateforme.io/quizz-night/" target="_blank" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
 
-    </main>
+        <!-- Projet 4 -->
+        <div class="col">
+          <div class="card">
+            <img src="images/livre or.png" alt="Livre d'Or" class="card-img-top">
+            <div class="card-body">
+              <h3 class="card-title">4ᵉ Livre d'Or</h3>
+              <p class="card-text">À ce jour, c'est notre dernier projet collectif. Le but étant de créer une page d'avis avec une inscription pour les utilisateurs, ainsi que les informations du post en question, grâce à du PHP.</p>
+              <a href="https://github.com/axel-heureux/livre-or" target="_blank" class="btn btn-primary">Voir le projet</a>
+            </div>
+          </div>
+        </div>
+      </article>
 
-    <footer>
-        <p>&copy; 2025 Sorrentino Gianni - WEB DEVELOPER ©</p>
-    </footer>
+      <p class="text-center mt-5">Vous pouvez également accéder à l'ensemble de mes projets publics sur mon profil GitHub, où vous pourrez les tester, télécharger ou les modifier selon vos besoins.</p>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const cards = document.querySelectorAll(".card");
-            cards.forEach((card, index) => {
-                setTimeout(() => card.classList.add("show"), index * 200);
-            });
-        });
-    </script>
+      <!-- Lien vers GitHub -->
+      <div class="text-center mt-4">
+        <a href="https://github.com/GianniSRT" target="_blank" class="btn btn-dark">
+          🔗 Mon Profil GitHub
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2025 Sorrentino Gianni - Web Developer.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
