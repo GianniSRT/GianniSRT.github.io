@@ -86,19 +86,26 @@ body {
 
 .parcours-container h1 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  font-weight: 700;
   margin-bottom: 40px;
   color: #343a40;
+  line-height: 1.3;
 }
+
 
 .parcours-section {
   margin-bottom: 40px;
 }
 
 .parcours-section h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #FF6347;
+  font-weight: 600;
   margin-bottom: 15px;
+  line-height: 1.3;
+  
+  
 }
 
 .parcours-section p {
@@ -109,6 +116,138 @@ body {
 
 .parcours-section p strong {
   font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  margin-top: 60px;
+}
+/* NAVBAR */
+.navbar {
+  background-color: #343a40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Liens navbar avec effet animé */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 600; /* Ajoute du gras aux liens */
+
+}
+
+/* Effet underline animé gauche → droite */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dégradé solaire au survol */
+.navbar-nav .nav-link:hover {
+  color: transparent;
+  background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700); /* Dégradé solaire */
+  -webkit-background-clip: text; /* Pour appliquer le dégradé uniquement sur le texte */
+  text-decoration: none;
+}
+
+/* Lien actif (page courante) */
+.navbar-nav .nav-link.active {
+  color: #FF6347 !important;
+  font-weight: 600;
+}
+
+/* SECTION PRESENTATION */
+.presentation {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #FF6347, #FF8C00);
+  color: white;
+}
+
+.presentation h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.introduction {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SECTION À PROPOS */
+.about {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.emoji {
+  font-size: 1.4rem;
+}
+
+/* SECTION COMPÉTENCES */
+.skills {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card img {
+  max-width: 60px;
+  margin-bottom: 15px;
 }
 
 /* FOOTER */

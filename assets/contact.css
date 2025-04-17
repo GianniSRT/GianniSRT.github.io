@@ -1,183 +1,224 @@
 /* Design général */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #212529;
-  }
-  
-  /* NAVBAR */
-  .navbar {
-    background-color: #343a40;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: white !important;
-    text-decoration: none;
-  }
-  
-  .navbar-brand:hover {
-    color: white !important;
-    text-decoration: none;
-  }
-  
-  /* Liens navbar avec effet animé */
-  .navbar-nav .nav-link {
-    position: relative;
-    color: white;
-    font-size: 1.1rem;
-    margin-left: 10px;
-    transition: color 0.3s ease;
-    text-decoration: none;
-    font-weight: 600; /* Ajoute du gras aux liens */
-  }
-  
-  /* Effet underline animé gauche → droite */
-  .navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    height: 2px;
-    width: 0;
-    background-color: white;
-    transition: width 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover::after {
-    width: 100%;
-  }
-  
-  /* Dégradé solaire au survol */
-  .navbar-nav .nav-link:hover {
-    color: transparent;
-    background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700); /* Dégradé solaire */
-    -webkit-background-clip: text; /* Pour appliquer le dégradé uniquement sur le texte */
-    text-decoration: none;
-  }
-  
-  /* Lien actif (page courante) */
-  .navbar-nav .nav-link.active {
-    color: #FF6347 !important;
-    font-weight: 600;
-  }
-  
-  /* SECTION CONTACT */
-  .contact-section {
-    padding: 80px 20px;
-    background-color: #f8f9fa;
-    text-align: center;
-  }
-  
-  .contact-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #343a40;
-  }
-  
-  .contact-intro {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #343a40;
-  }
-  
-  .contact-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-    margin-top: 40px;
-  }
-  
-  .contact-details, .contact-form {
-    width: 45%;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-details h2, .contact-form h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #343a40;
-  }
-  
-  .contact-info {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-info li {
-    margin-bottom: 12px;
-  }
-  
-  .contact-info a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  
-  .contact-logos a {
-    margin-right: 20px;
-  }
-  
-  .contact-logo {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
-  }
-  
-  .contact-logo:hover {
-    transform: scale(1.1);
-  }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #343a40;
-  }
-  
-  .contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form button {
-    background-color: #FF6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .contact-form button:hover {
-    background-color: #FF8C00;
-  }
-  
-  .contact-form small {
-    display: block;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #6c757d;
-  }
-  
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #343a40;
-    color: white;
-    margin-top: 60px;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #343a40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: white !important;
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  color: white !important;
+  text-decoration: none;
+}
+
+/* Liens navbar avec effet animé */
+.navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Effet underline animé gauche → droite */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Dégradé solaire au survol */
+.navbar-nav .nav-link:hover {
+  color: transparent;
+  background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700);
+  -webkit-background-clip: text;
+}
+
+/* Lien actif (page courante) */
+.navbar-nav .nav-link.active {
+  color: #FF6347 !important;
+  font-weight: 600;
+}
+
+/* SECTION CONTACT */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.contact-intro {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #343a40;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+/* Contact Details Section */
+.contact-details {
+  width: 45%;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 12px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-logos a {
+  margin-right: 20px;
+}
+
+.contact-logo {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.contact-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Contact Form Section */
+.contact-form {
+  width: 45%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f0f5ff; /* Ajout d'un fond bleu clair pour différencier les formulaires */
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #343a40;
+  font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #495057;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* Fond blanc pour les champs */
+}
+
+/* Effet sur le focus des champs de saisie */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #FF6347; /* Bordure rouge vif */
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Ombre légère pour attirer l'attention */
+  outline: none;
+}
+
+/* Bouton de soumission */
+.contact-form button {
+  background-color: #FF6347;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%; /* Remplir la largeur du formulaire */
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #FF8C00;
+  transform: translateY(-3px);
+}
+
+.contact-form small {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+  margin-top: 60px;
+}
