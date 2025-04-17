@@ -139,12 +139,11 @@ body {
 /* Contact Form Section */
 .contact-form {
   width: 45%;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #f0f5ff; /* Ajout d'un fond bleu clair pour différencier les formulaires */
 }
 
 .contact-form:hover {
@@ -176,19 +175,15 @@ body {
   border-radius: 8px;
   font-size: 1rem;
   color: #495057;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #ffffff; /* Fond blanc pour les champs */
+  transition: border-color 0.3s ease;
 }
 
-/* Effet sur le focus des champs de saisie */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #FF6347; /* Bordure rouge vif */
-  box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Ombre légère pour attirer l'attention */
+  border-color: #FF6347;
   outline: none;
 }
 
-/* Bouton de soumission */
 .contact-form button {
   background-color: #FF6347;
   color: white;
@@ -198,8 +193,6 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 100%; /* Remplir la largeur du formulaire */
-  margin-top: 10px;
 }
 
 .contact-form button:hover {
