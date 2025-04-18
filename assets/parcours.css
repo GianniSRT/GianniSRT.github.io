@@ -1,6 +1,7 @@
 /* Importation de la police Poppins depuis Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+/* BASE */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f8f9fa;
@@ -9,8 +10,8 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background-color: #343a40;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #343a40; /* Couleur de fond sombre */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
 .navbar-brand {
@@ -25,165 +26,46 @@ body {
   text-decoration: none;
 }
 
-/* Liens navbar avec effet animé */
+/* Liens navbar par défaut */
 .navbar-nav .nav-link {
   position: relative;
-  color: white;
+  color: white; /* Couleur blanche par défaut */
   font-size: 1.1rem;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.3s ease;
+  margin-left: 10px;
   text-decoration: none;
+  transition: color 0.3s ease, background-image 0.3s ease;
 }
 
-/* Effet underline animé gauche → droite */
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 0;
-  background-color: white;
-  transition: width 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
-
-/* Dégradé solaire au survol */
+/* Effet au survol */
 .navbar-nav .nav-link:hover {
-  color: transparent;
+  color: transparent; /* Rendre le texte transparent */
   background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700); /* Dégradé solaire */
   -webkit-background-clip: text; /* Appliquer le dégradé uniquement sur le texte */
-  text-decoration: none;
-}
-
-/* Lien actif (page actuelle) : pas d'effet de survol, mais réinitialisation des styles */
-.navbar-nav .nav-link.active {
-  color: white; /* Garder la couleur du texte comme blanche */
-  font-weight: 600; /* Garder l'épaisseur de la police pour l'onglet actif */
-  background: none; /* Pas de fond dégradé pour l'onglet actif */
-  text-decoration: none; /* Pas de dégradé pour l'onglet actif */
-}
-
-.navbar-nav .nav-link.active::after {
-  width: 0; /* Pas de soulignement pour l'onglet actif */
-}
-
-/* SECTION PARCOURS */
-.parcours-container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 60px 20px;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.parcours-container h1 {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #343a40;
-  line-height: 1.3;
-}
-
-
-.parcours-section {
-  margin-bottom: 40px;
-}
-
-.parcours-section h2 {
-  font-size: 2rem;
-  color: #FF6347;
-  font-weight: 600;
-  margin-bottom: 15px;
-  line-height: 1.3;
-  
-  
-}
-
-.parcours-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #555;
-}
-
-.parcours-section p strong {
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #343a40;
-  color: white;
-  margin-top: 60px;
-}
-/* NAVBAR */
-.navbar {
-  background-color: #343a40;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: white !important;
-  text-decoration: none;
-}
-
-.navbar-brand:hover {
-  color: white !important;
-  text-decoration: none;
-}
-
-/* Liens navbar avec effet animé */
-.navbar-nav .nav-link {
-  position: relative;
-  color: white;
-  font-size: 1.1rem;
-  margin-left: 10px;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  font-weight: 600; /* Ajoute du gras aux liens */
-
-}
-
-/* Effet underline animé gauche → droite */
-.navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 0;
-  background-color: white;
-  transition: width 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover::after {
-  width: 100%;
-}
-
-/* Dégradé solaire au survol */
-.navbar-nav .nav-link:hover {
-  color: transparent;
-  background-image: linear-gradient(to right, #FF6347, #FF8C00, #FFD700); /* Dégradé solaire */
-  -webkit-background-clip: text; /* Pour appliquer le dégradé uniquement sur le texte */
-  text-decoration: none;
+  text-decoration: none; /* Pas de soulignement */
 }
 
 /* Lien actif (page courante) */
 .navbar-nav .nav-link.active {
-  color: #FF6347 !important;
+  color: white; /* Couleur blanche par défaut pour le lien actif */
+  background-image: none; /* Pas de dégradé par défaut */
   font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
 }
 
 /* SECTION PRESENTATION */
@@ -216,6 +98,47 @@ footer {
 
 .emoji {
   font-size: 1.4rem;
+}
+
+/* SECTION PARCOURS */
+.parcours-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 60px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.parcours-container h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #343a40;
+  line-height: 1.3;
+}
+
+.parcours-section {
+  margin-bottom: 40px;
+}
+
+.parcours-section h2 {
+  font-size: 2rem;
+  color: #FF6347;
+  font-weight: 600;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.parcours-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.parcours-section p strong {
+  font-weight: 600;
 }
 
 /* SECTION COMPÉTENCES */

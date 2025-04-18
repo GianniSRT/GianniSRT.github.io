@@ -1,6 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa;
+  background-color: #f4f4f4; /* Gris clair pour réduire la luminosité */
   color: #212529;
 }
 
@@ -8,6 +8,45 @@ body {
 .navbar {
   background-color: #343a40;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* NAVBAR LOGO */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espace entre le texte et le logo */
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.logo-navbar {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FF8C00; /* Couleur orange pour le logo */
+  position: relative;
+}
+
+.logo-navbar::before,
+.logo-navbar::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(to right, #FF6347, #FF8C00); /* Dégradé radiant */
+}
+
+.logo-navbar::before {
+  left: -30px; /* Barre à gauche */
+}
+
+.logo-navbar::after {
+  right: -30px; /* Barre à droite */
 }
 
 .navbar-brand {
@@ -92,8 +131,46 @@ body {
   margin: auto;
 }
 
-.emoji {
-  font-size: 1.4rem;
+.about-container {
+  display: flex;
+  flex-direction: row; /* Aligne les cartes horizontalement */
+  gap: 20px; /* Espacement entre les cartes */
+  margin-top: 20px;
+  justify-content: flex-start; /* Aligne les cartes à gauche */
+}
+
+.about-card {
+  background: #e8e8e8; /* Fond légèrement plus foncé */
+  color: #212529; /* Texte sombre pour une bonne lisibilité */
+  padding: 20px;
+  border-radius: 10px; /* Coins légèrement arrondis */
+  border: 1px solid #ccc; /* Bordure subtile */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+  text-align: left; /* Aligne le texte à gauche */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px; /* Largeur fixe pour les cartes */
+}
+
+.about-card:hover {
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre un peu plus marquée */
+}
+
+.about-card .emoji {
+  font-size: 2rem; /* Taille des émojis */
+  margin-bottom: 10px; /* Espacement sous l'émoji */
+  display: block;
+}
+
+.about-card h3 {
+  font-size: 1.4rem; /* Taille du titre */
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.about-card p {
+  font-size: 1rem; /* Taille du texte */
+  margin-top: 10px;
 }
 
 /* SECTION COMPÉTENCES */
@@ -111,21 +188,82 @@ body {
 }
 
 .skill-card {
-  background: #ffffff;
+  background: #e8e8e8; /* Fond légèrement plus foncé que #f0f0f0 */
+  color: #212529; /* Texte sombre pour une bonne lisibilité */
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; /* Coins légèrement arrondis */
+  border: 1px solid #ccc; /* Bordure subtile légèrement plus foncée */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Légère élévation au survol */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Ombre un peu plus marquée */
 }
 
 .skill-card img {
   max-width: 60px;
   margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* SECTION LOGO ET SLOGAN */
+.logo-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4; /* Fond clair pour discrétion */
+  color: #212529; /* Couleur sombre pour le texte */
+}
+
+.logo {
+  font-size: 3rem; /* Taille légèrement réduite */
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 3px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu */
+}
+
+.slogan {
+  font-size: 1.2rem; /* Taille réduite pour discrétion */
+  font-weight: 400;
+  margin-top: 10px;
+  opacity: 0;
+  animation: slideIn 2s ease-in-out 1s forwards; /* Animation de glissement avec délai */
+}
+
+/* Animation de fondu pour le logo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation de glissement pour le slogan */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Glisse vers le haut */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* FOOTER */
@@ -135,4 +273,30 @@ footer {
   background-color: #343a40;
   color: white;
   margin-top: 60px;
+}
+
+/* Présentation */
+section.presentation {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #FF6347, #FF8C00);
+  color: white;
+}
+
+section.presentation h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+section.presentation .logo-discret h2.logo {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+section.presentation p.introduction {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }

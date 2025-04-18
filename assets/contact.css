@@ -59,7 +59,6 @@ body {
 
 /* Lien actif (page courante) */
 .navbar-nav .nav-link.active {
-  color: #FF6347 !important;
   font-weight: 600;
 }
 
@@ -205,6 +204,31 @@ body {
   margin-top: 15px;
   font-size: 0.95rem;
   color: #6c757d;
+}
+
+/* Bouton Télécharger CV */
+.download-cv {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-download {
+  display: inline-block;
+  background: linear-gradient(to right, #FF6347, #FF8C00);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, #FF8C00, #FFD700);
 }
 
 /* FOOTER */
